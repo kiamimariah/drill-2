@@ -43,6 +43,11 @@ function decode(code) {
     }
 }
 
-console.log(decode('dip'));
-console.log(decode('cat'));
-console.log(decode('apples'));
+console.log(decode('craft'));
+console.log(decode('block'));
+console.log(decode('argon'));
+console.log(decode('meter'));
+console.log(decode('bells'));
+console.log(decode('brown'));
+console.log(decode('croon'));
+console.log(decode('droop'));
