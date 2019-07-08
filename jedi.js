@@ -51,3 +51,86 @@ console.log(decode('bells'));
 console.log(decode('brown'));
 console.log(decode('croon'));
 console.log(decode('droop'));
+
+function daysInAMonth(month) {
+     if (month === "January" || month === "March" || month === "May" || month === "July" || 
+         month === "August" || month === "October" || month === "December") {
+            console.log(`${month} has 31 days.`)
+            return 31;
+        }
+    if (month === "April" || month === "June" || month === "September" ||
+        month === "November") {
+            console.log(`${month} has 30 days.`)
+            return 30;
+        }
+    if (month ==="February") {
+            console.log(`${month} has 28 days.`)
+            return 28;
+        }
+    else {
+            throw new Error("Not a valid month");
+        }
+    }
+    
+    try {daysInAMonth("February")}
+    catch(e) {console.log(e.message)
+    }
+
+    function rps(hand) {
+        const pchand = Math.floor(Math.random() * 3) + 1;
+        
+        if (hand === 1) {
+            console.log("You picked rock")
+        }
+         if (hand === 2) {
+            console.log("You picked paper")
+        }
+         if (hand === 3) {
+            console.log("You picked scissors")
+        }
+        else {
+            console.log("Not a valid answer. Please only use 1, 2, and 3")
+            return;
+        }
+    
+        if (pchand === 1) {
+            console.log("The computer picked rock")
+        }
+         if (pchand === 2) {
+            console.log("The computer picked paper")
+        }
+         if (pchand === 3) {
+            console.log("The computer picked scissors")
+        }
+        else {
+            console.log("Wrong Way")
+            return;
+        }
+    
+        if (hand === pchand) {
+            console.log("It's a tie!")
+        }
+        else if (hand === 1 && pchand === 2) {
+            console.log("You lose.")
+        }
+        else if (hand === 1 && pchand === 3) {
+            console.log("You win!")
+        }
+        else if (hand === 2 && pchand === 1) {
+            console.log("You win!")
+        }
+        else if (hand === 2 && pchand === 3) {
+            console.log("You lose.")
+        }
+        else if (hand === 3 && pchand === 1) {
+            console.log("You lose.")
+        }
+        else if (hand === 3 && pchand === 2) {
+            console.log("You win!")
+        }
+        else {
+            console.log("Nope.")
+        }
+    }
+    
+    rps();
