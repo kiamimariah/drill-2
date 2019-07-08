@@ -24,3 +24,25 @@ beyond(100);
 beyond(0);
 beyond(-33);
 
+function decode(code) {
+    let firstCharacter = code.charAt(0);
+    if (firstCharacter === 'a'){
+        return code.charAt(1);
+    }
+    if (firstCharacter === 'b'){
+        return code.charAt(2);
+    }
+    if (firstCharacter === 'c'){
+        return code.charAt(3);
+    }
+    if (firstCharacter === 'd'){
+        return code.charAt(4);
+    }
+    else {
+        return '';
+    }
+}
+
+console.log(decode('dip'));
+console.log(decode('cat'));
+console.log(decode('apples'));
